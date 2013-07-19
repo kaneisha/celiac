@@ -1,0 +1,44 @@
+#phone{
+	background-image:url(../pics/ipod_copy.png);
+	background-repeat:no-repeat;
+	height:800px;
+	width:900px;
+	margin-left:700px;
+	margin-top:-400px;
+	position:fixed;
+}
+
+#screen{
+	left:89px;
+	position:relative;
+	top:194px;
+}
+
+html { 
+	background: url(../pics/picnic.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#about{
+	transform:rotate(-30deg);
+	font-family:chalkduster, helvetica, sans-serif;
+	width:600px;
+	margin-top:50px;
+	margin-left:110px;
+	line-height:2;
+}
+
+#title{
+	transform:rotate(-30deg);
+	font-family:chalkduster, helvetica, sans-serif;
+	margin-top:160px;
+	margin-left:150px;
+	width:400px;
+	/* 
+	width:500px;
+	margin-top:150px;
+	*/
+}
