@@ -80,7 +80,7 @@ package view
 			}
 			
 			setupScrolling();
-			//stage.addEventListener(MouseEvent.MOUSE_WHEEL, handleMouseWheel);
+			stage.addEventListener(MouseEvent.MOUSE_WHEEL, handleMouseWheel);
 			
 			
 		}
@@ -140,16 +140,27 @@ package view
 			
 		}
 		
-//		private function handleMouseWheel(event:MouseEvent):void 
-//		{
-//			if ((MouseEvent(event).delta > 0 && _layout.y < 270) || (MouseEvent(event).delta < 0 && _layout.y > 0)) 
-//			{
-//				
-//				_layout.y = _layout.y + (MouseEvent(event).delta * 4);
-//				trace(MouseEvent(event).delta);
-//			}
-//			
-//		}
+		private function handleMouseWheel(event:MouseEvent):void 
+		{
+			// Scrolling Down?
+			if(MouseEvent(event).delta > 0 && _scrollHolder.y >= 0){
+				_scrollHolder.y = 0;
+				return;
+			}
+			
+			// Scrolling Up?
+			if(MouseEvent(event).delta < 0 && _scrollHolder.y <= -(_scrollHolder.height - _masker.height)){
+				_scrollHolder.y = -(_scrollHolder.height - _masker.height);
+				return;
+			}
+			
+			//if ((MouseEvent(event).delta > 0 && _layout.y < 270) || (MouseEvent(event).delta < 0 && _layout.y > 0)) 
+			//{
+				_scrollHolder.y += (MouseEvent(event).delta * 3);
+				trace(MouseEvent(event).delta);
+			//}
+			
+		}
 		
 		
 	}
