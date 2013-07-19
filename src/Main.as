@@ -144,7 +144,7 @@ package
 		
 		protected function onCopyClick(event:Event):void
 		{
-			var uRequest:URLRequest = new URLRequest("http://kaneisha.github.io/dfp/index.html");
+			var uRequest:URLRequest = new URLRequest("http://kaneisha.github.io/celiac/index.html");
 			navigateToURL(uRequest, "_blank");
 			
 		}
