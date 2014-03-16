@@ -28,10 +28,11 @@ package model
 			trace(search);
 			
 			var ul:URLLoader = new URLLoader();
-			ul.load(new URLRequest (URL + "http://api.nutritionix.com/v1/search/" + search + "?appId=58e7409d&appKey=ea55d470d93bafbab65a666b2541abcf"));
+			ul.load(new URLRequest (URL + "http://api.nutritionix.com/v1/search/" + search + "?results=0:20&fields=item_name,brand_name,item_id,nf_ingredient_statement&appId=58e7409d&appKey=ea55d470d93bafbab65a666b2541abcf"));
 			ul.addEventListener(Event.COMPLETE, onSearchComplete);
 			
 			trace(URL +"http://api.nutritionix.com/v1/search/" + search + "?appId=58e7409d&appKey=ea55d470d93bafbab65a666b2541abcf");
+			trace("hi");
 		}
 		
 		private function onSearchComplete(event:Event):void
